@@ -82,7 +82,7 @@ class ReactJWPlayer extends Component {
 
     const component = this;
     const player = window.jwplayer(this.videoRef);
-    if (!player) {
+    if (!player || !player.id) {
       // this player ref may have been destroyed already
       return; 
     }
